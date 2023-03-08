@@ -1,0 +1,11 @@
+304 working with Query Strings
+yelp camp till  413 video watched
+rest un watched
+
+
+
+section 39
+watched = [410,
+411,
+412,
+413 ]
