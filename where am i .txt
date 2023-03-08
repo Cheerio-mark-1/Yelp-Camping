@@ -1,4 +1,4 @@
-current here => 340 working with Query Strings
+current here => 340(0.15) working with Query Strings
 yelp camp till  413 video watched
 rest un watched
 
@@ -9,3 +9,6 @@ watched = [410,
 411,
 412,
 413 ]
+
+
+current watched  =[416]
