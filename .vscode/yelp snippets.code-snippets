@@ -17,11 +17,22 @@
 	// }
 		"Print to console": {
 		"scope": "javascript,typescript",
-		"prefix": "log",
+		"prefix": "clog",
 		"body": [
 			"console.log(`$1`);",
 			"$2"
 		],
 		"description": "Log output to console"
+	},
+	"rqeuire shorthand": {
+		"scope": "javascript,typescript",
+		"prefix": "_req",
+		"body": [
+			"const $2 = require(\"$1\");",
+			"$3"
+
+		]
+		
 	}
+
 }
