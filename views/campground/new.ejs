@@ -2,16 +2,26 @@
 <div class="row">
   <h1 class="text-center">New Campground</h1>
   <div class="col-6 offset-3">
-    <form action="/campgrounds" method="post">
+    <form
+      action="/campgrounds"
+      method="post"
+      class="validated-forms"
+      novalidate
+    >
       <div class="form-group mb-3">
         <label for="title" class="form-label">Title</label>
         <input
           type="text"
           name="campground[title]"
           id="title"
+          aria-describedby="titlenote"
           class="form-control"
-          required
+          aria-invalid="true"
         />
+        <div id="titlenote" class="invalid-feedback" aria-label="title">
+          Please Leave Title
+        </div>
+        <div class="valid-feedback" id="titlenote">Looks good</div>
       </div>
 
       <div class="form-group mb-3">
@@ -20,9 +30,13 @@
           type="text"
           name="campground[location]"
           id="location"
+          aria-describedby="locationnote"
           class="form-control"
           required
         />
+
+        <div class="invalid-feedback" id="location">Please provide a valid</div>
+        <div class="valid-feedback" id="location">Looks good!</div>
       </div>
 
       <div class="form-group mb-3">
@@ -31,9 +45,14 @@
           type="text"
           name="campground[image]"
           id="image"
+          aria-describedby="imagenote"
           class="form-control"
           required
         />
+        <div class="invalid-feedback" id="imagenote">
+          Please provide image url
+        </div>
+        <div class="valid-feedback" id="imagenote">Looks good!</div>
       </div>
 
       <div class="mb-3">
@@ -47,11 +66,13 @@
             required
             id="price"
             class="form-control"
-            required
             placeholder="0.00"
-            aria-label="price"
-            aria-describedby="price-label"
+            aria-describedby="pricelabel"
           />
+          <div class="invalid-feedback" id="pricelabel">
+            Price should be greater than 0
+          </div>
+          <div class="valid-feedback" id="pricelabel">Looks good!</div>
         </div>
       </div>
 
@@ -62,8 +83,13 @@
           name="campground[description]"
           id="description"
           class="form-control"
+          aria-describedby="desbody"
           required
         ></textarea>
+        <div class="invalid-feedback" id="desbody">
+          Please provide valid description
+        </div>
+        <div class="valid-feedback" id="desbody">Looks good!</div>
       </div>
 
       <button class="btn btn-success mb-3">Add Campground</button>
